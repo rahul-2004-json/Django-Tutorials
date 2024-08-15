@@ -1,0 +1,25 @@
+{% comment %} This layout.html is my default template whatever written in it
+will act like a template that can be used anywhere {% endcomment %} 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% comment %} 
+    Block allows us to change it values dynamically whenever we
+    want 
+    {% endcomment %}
+    <title>
+        {% block title %} 
+        Default Value 
+        {% endblock %}
+    </title>
+  </head>
+  <body>
+    <nav>This is our navbar</nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

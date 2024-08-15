@@ -1,0 +1,50 @@
+
+--How to create a Django Project -- 
+django-admin startproject project-name
+
+
+-manage.py is the main file that runs first
+-sqlite3 is used in django as main database
+
+How to run manage.py file 
+-python manage.py runserver 
+or
+-python manage.py runserver 8002
+
+
+
+##### How Django works behind #####
+flow of django framework
+
+-User sends a ->request -> that is hit on urls.py -> sends it to view.py that interacts with it and can give response in any format back to user.
+
+-response is always sent by views
+
+-static will have css and javascript files 
+-templates will contain the HTML files
+
+
+--Templating Engine --
+This means we can inject our code programmitically anywhere
+
+What is Templating in Django?
+Imagine you're making a personalized greeting card. You have a basic card design with some parts left blank, like "Dear [Name], Happy [Event]!" You can fill in those blanks with different names and events for different people.
+
+In Django, a template is like that card design. It's a basic structure for a web page, but with some placeholders where you can insert dynamic content—like the user’s name, a list of items, or a message.
+
+
+
+####### How to make an app in Django ######
+//Below statement makes the entry point for our file
+py manage.py startapp appname
+
+Step 1 : After making this app
+-after making an app from above statement we will have to make our main project aware of this app , by writing this app name in settings.py
+-We make a template folder in it basically containing the html files to render
+-We then define the views.py to handle the routes with chai/all_chai.html
+-We pass the control from main urls.py file to specific app ki urls.py file so that it can handle routes associated with it
+-We update the urls.py file of specific app to give us response with views file
+
+
+
+
