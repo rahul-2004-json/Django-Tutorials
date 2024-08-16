@@ -47,4 +47,9 @@ Step 1 : After making this app
 
 
 
+- In django we never talk directly to the database , on our behalf the Django ORM talks for us.
+-How to start admin panel in Django 
+python manage.py migrate
 
+-How to create super user in django
+python manage.py createsuperuser

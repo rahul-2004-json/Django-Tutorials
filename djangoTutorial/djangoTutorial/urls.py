@@ -26,4 +26,5 @@ urlpatterns = [
     # Below is an example of passing the control from main urls.py to a urls.py in another app
     # If someone hits route chai/ then the control will be transfered to the urls.py file present in chai
     path("chai/",include('chai.urls')),   # in include('chai.urls')  this is coming from registered app in settings.py file
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
