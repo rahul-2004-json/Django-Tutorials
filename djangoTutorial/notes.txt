@@ -53,3 +53,18 @@ python manage.py migrate
 
 -How to create super user in django
 python manage.py createsuperuser
+
+
+
+//To allow storage of images , we will have to notify in settings.py to store images
+//Add the below lines in settings.py 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+//After adding models in Django app folder , we will have to notify the application by migrating the models
+//Django behind the scenes converts the models into SQL query 
+** not sure //Migration in Django is basically a process to make application aware of certain changes 
+
+
+-We can attach a model to admin.py and see it in admin panel
