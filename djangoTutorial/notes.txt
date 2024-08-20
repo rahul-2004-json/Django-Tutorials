@@ -64,7 +64,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 //After adding models in Django app folder , we will have to notify the application by migrating the models
 //Django behind the scenes converts the models into SQL query 
-** not sure //Migration in Django is basically a process to make application aware of certain changes 
-
+//Migration in Django is basically a process to make application aware of certain changes in models 
+//first write python manage.py makemigrations [appname]
+--to reflect changes in application run command as below
+//then python manage.py migrate
 
 -We can attach a model to admin.py and see it in admin panel

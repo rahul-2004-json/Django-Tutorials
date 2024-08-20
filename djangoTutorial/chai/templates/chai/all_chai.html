@@ -1,9 +1,28 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
 
 {% block title %} 
-Chai Page
+Chai Page 
 {% endblock %} 
 
 {% block content %}
 <h1>This is chai page</h1>
-{% endblock %}
+
+<div class="grid grid-cols-3 gap-4 m-4">
+    {% for chai in chais %}
+    <div class="bg-green-500 p-4">
+      <img class="rounded shadow-lg" src="{{chai.image.url}}" alt="" />
+      <p>{{chai.name}}</p>
+      <a href="{% url 'chai_detail' chai.id %}">
+        <button
+        type="button"
+        class = "bg-blue-400 p-2 font-semibold rounded-xl"
+        >
+        {{chai.type}} - {{chai.id}}
+        </button>
+      </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %} 
+
