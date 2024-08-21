@@ -70,3 +70,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 //then python manage.py migrate
 
 -We can attach a model to admin.py and see it in admin panel
+
+
+
+//What is cascading in database
+In SQL keyword CASCADE is used to simultaneously update or delete a record in both parent and child table
+
+
